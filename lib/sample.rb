@@ -1,4 +1,6 @@
-numbers = []
-(1..10).step(2){|n| numbers << n}
+def greeting(*names)
+	"#{names.join('と')}、こんにちは！"
+end
 
-puts numbers
+puts greeting("田中さん")
+puts greeting("田中さん", "鈴木さん")
