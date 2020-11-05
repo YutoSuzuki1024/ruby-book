@@ -1,6 +1,9 @@
-def greeting(*names)
-	"#{names.join('と')}、こんにちは！"
-end
+dimensions = [
+	[10,20],
+	[30,40],
+	[50,60],
+]
 
-puts greeting("田中さん")
-puts greeting("田中さん", "鈴木さん")
+dimensions.each_with_index do |(length, width), i|
+	puts "length : #{length}, width : #{width}, i : #{i}"
+end
