@@ -1,9 +1,12 @@
-dimensions = [
-	[10,20],
-	[30,40],
-	[50,60],
-]
+fruits = ["apple", "orange", "melon"]
+count = 0
+fruits.each do |fruit|
+	print "#{fruit}は好きですか？=>"
+	answer = "いいえ"
+	puts answer
 
-dimensions.each_with_index do |(length, width), i|
-	puts "length : #{length}, width : #{width}, i : #{i}"
+	count += 1
+	redo if answer != "はい" && count < 2
+
+	count = 0
 end
