@@ -1,4 +1,5 @@
-def user_exist?
-	user = find_user
-	
-end
+{
+  japan: 'yen',
+  america: 'dollar',
+  italy: 'euro'
+}
