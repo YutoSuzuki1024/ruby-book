@@ -1,3 +1,20 @@
-text = "私の誕生日は1977年7月17日です。"
-puts text.gsub(/(\d+)年(\d+)月(\d+)日/, '\1-\2-\3')
+class Product
+	attr_accessor :name, :price
 
+	def initialize(name, price)
+		@name = name
+		@price = price
+	end
+
+	def self.format_price(price)
+		"#{price}円"
+	end
+
+	def to_s
+		formatted_price = Product.format_price(price)
+		"name: #{name}, price: #{formatted_price}"
+	end
+end
+
+product = Product.new("A great movie", 1000)
+puts product.to_s
