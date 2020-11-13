@@ -1,20 +1,20 @@
-class Product
-	attr_accessor :name, :price
-
-	def initialize(name, price)
+class User
+	def initialize(name)
 		@name = name
-		@price = price
 	end
-
-	def self.format_price(price)
-		"#{price}円"
-	end
-
-	def to_s
-		formatted_price = Product.format_price(price)
-		"name: #{name}, price: #{formatted_price}"
+	
+	def hello
+		"Hello, #{@name}!"
 	end
 end
 
-product = Product.new("A great movie", 1000)
-puts product.to_s
+class User
+	alias hello_original hello
+	
+	def hello
+		"#{hello_original}じゃなくて、#{@name}さん、こんにちは！"
+	end
+end
+
+user = User.new("Alice")
+puts user.hello
