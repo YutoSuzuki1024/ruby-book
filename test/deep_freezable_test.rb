@@ -1,5 +1,7 @@
 require "minitest/autorun"
-require "./lib/deep_freezable"
+require "./lib/bank"
+require "./lib/team"
+
 
 class DeepFreezableTest < Minitest::Test
 	def test_deep_freeze
