@@ -1,12 +1,20 @@
-module Loggable
+module NameChanger
+	def Change_name
+		self.name = "ありす"
+	end
 end
 
-class Product
-	include Loggable
+class User
+	include NameChanger
+
+	attr_accessor :name
+
+	def initialize(name)
+		@name = name
+	end
 end
 
-product = Product.new
+user = User.new("alice")
 
-puts product.is_a?(Product)
-puts product.is_a?(Loggable)
-puts product.is_a?(Object)
+user.Change_name
+puts user.name
