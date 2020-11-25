@@ -1,20 +1,19 @@
-module NameChanger
-	def Change_name
-		self.name = "ありす"
+module Baseball
+	class Second
+		def initialize(player, uniform_number)
+			@player = player
+			@uniform_number = uniform_number
+		end
 	end
 end
 
-class User
-	include NameChanger
-
-	attr_accessor :name
-
-	def initialize(name)
-		@name = name
+module Clock
+	class Second
+		def initialize(digits)
+			@digits = digits
+		end
 	end
 end
 
-user = User.new("alice")
-
-user.Change_name
-puts user.name
+puts Baseball::Second.new("Alice", 13)
+puts Clock::Second.new(13)
