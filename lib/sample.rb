@@ -1,5 +1,15 @@
-begin
-	1 / 0
-rescue ZeroDivisionError
-	puts "0で除算しました"
+def currency_of(country)
+	case country
+	when :japan
+		"yen"
+	when :us
+		"dollar"
+	when :india
+		"rupee"
+	else
+		raise ArgumentError, "無効な国名です。#{country}"
+	end
 end
+
+puts currency_of(:japan)
+puts currency_of(:china)
