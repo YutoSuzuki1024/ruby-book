@@ -1,15 +1,3 @@
-def currency_of(country)
-	case country
-	when :japan
-		"yen"
-	when :us
-		"dollar"
-	when :india
-		"rupee"
-	else
-		raise ArgumentError, "無効な国名です。#{country}"
-	end
+File.open("some.txt", "w") do |file|
+	file << "Hello."
 end
-
-puts currency_of(:japan)
-puts currency_of(:china)
